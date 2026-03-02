@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最美的年纪在欧洲游学记 | Aigu（阿一古）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#333333',
+                        accent: '#0066ff',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* 卡通高亮效果 */
+        .highlight-link {
+            position: relative;
+            display: inline-block;
+            color: #0066ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: #ffeb3b;
+            z-index: -1;
+            transform: rotate(-1deg);
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-link:hover {
+            color: #0052cc;
+        }
+        
+        .highlight-link:hover::after {
+            height: 8px;
+            transform: rotate(0deg) scale(1.05);
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body class="bg-white text-primary font-sans">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="navbar-fixed bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
+                <a href="../index.html" class="inline-flex items-center px-4 py-2 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                    <i class="fa fa-arrow-left mr-2"></i> 返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 内容区域 -->
+    <section class="py-24 pt-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- 标题 -->
+                <div class="mb-12 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-2">最美的年纪在欧洲游学记</h1>
+                    <p class="text-xl text-gray-600">Études en Europe à l'âge le plus beau</p>
+                    <div class="mt-4 text-gray-500">
+                        <i class="fa fa-calendar mr-2"></i> 2023
+                    </div>
+                </div>
+                
+                <!-- 主图 -->
+                <div class="mb-12">
+                    <div class="aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&h=675&fit=crop" alt="Europe Study Abroad" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- 介绍语 -->
+                <div class="mb-12 p-6 bg-light rounded-lg shadow-sm">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        我的岗位在8月10号结束，8月11号不再提供住宿，距离我去ESSEC Business School 报道8月25日还有两周的时间，这两周的时间选择了
+                        <a href="#italy" class="highlight-link font-medium">欧洲旅行的第一站——意大利</a>，
+                        从美丽的西西里海岸开始，向上继续探索罗马和佛罗伦萨。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        意大利旅行结束后，重新激活了巴黎奥运会的Navigo卡片，继续在
+                        <a href="#essec" class="highlight-link font-medium">法国埃塞克高等商学院（ESSEC Business School）</a>
+                        的交换求学之路。这期间，我把课程选在了每周的周二、周三、周四，这样每周喜提四天小假期供我探索旅行。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        在交换期间，我独自或到结伴或到目的地与好友汇合，依次探索了，
+                        <a href="#cote-dazur" class="highlight-link font-medium">南法蔚蓝海岸</a>、
+                        <a href="#normandy" class="highlight-link font-medium">北法诺曼底</a>、
+                        <a href="#belgium" class="highlight-link font-medium">比利时</a>、
+                        <a href="#switzerland" class="highlight-link font-medium">瑞士</a>、
+                        <a href="#germany" class="highlight-link font-medium">德国</a>、
+                        <a href="#uk" class="highlight-link font-medium">英国</a>，
+                        在
+                        <a href="#denmark" class="highlight-link font-medium">丹麦</a>
+                        过完圣诞节之后回国。
+                    </p>
+                </div>
+                
+                <!-- 内容 -->
+                <div class="prose prose-lg max-w-none">
+                    <h2 id="italy" class="text-2xl font-bold mb-8">意大利西西里</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        对西西里的印象来自《西西里的美丽传说》、《教父》，直到亲自来到这个美丽的岛屿，傅金月的家。傅金月 Flavia是意大利西西里人，23年来到北京第二外国语学院学习中文，我们在北京吃了地道的北京早点，拿了北京市政府新闻办的“爱上北京的100个理由”短视频创作奖。巴黎奥运会结束我们来到了她的家，收到了热情招待，留下了独一无二、绝无仅有的西西里打开方式。
+                    </p>
+                    
+                    <!-- 视频：Sicily Island.mp4 -->
+                    <div class="mb-8">
+                        <div class="aspect-video rounded-lg overflow-hidden">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="../videos/Sicily Island.mp4" type="video/mp4">
+                                <source src="../videos/Sicily Island.webm" type="video/webm">
+                                您的浏览器不支持视频播放。
+                            </video>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">提示：请将西西里视频文件上传至 videos/Sicily Island.mp4</p>
+                    </div>
+                    
+                    <!-- 图片预留位置 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        <!-- 图片1 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片1</p>
+                            </div>
+                        </div>
+                        <!-- 图片2 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片2</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-12">
+                        继续北上，来到罗马、佛罗伦萨
+                    </p>
+                    
+                    <h2 id="essec" class="text-2xl font-bold mb-8">埃塞克高等商学院</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        RER A线是最早的一条从远郊Cergy 通向巴黎的一条城际铁路。埃塞克高等商学院坐落在终点站Cergy perfecture，去一趟小巴黎要45分钟起。45分钟的地铁不知道法国人觉得长不长，但是对我来说，要知道从东五环BISU到北京市中心 也要做地铁45分钟。所以，一有空就跑去小巴黎玩，对我来说根本不会是枯燥的旅程，地铁上看看书，观察观察法国人，一会就到了。这也就有了在高商的一学期，对巴黎狠狠的调研了一下。
+                    </p>
+                    
+                    <!-- 图片1：我的地铁读物：巴黎 一个伟大的城市 -->
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-2">图片1：我的地铁读物：巴黎 一个伟大的城市</h4>
+                        <div class="aspect-[16/9] rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片：我的地铁读物</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        我是J人，但是在巴黎的日子，我是漫无目的游览，经常是地铁上读到哪个博物馆或者那个街区，觉得很有意思，那么就去这里。或者一开始有目标， 比如我要去荣军院（Hôtel des Invalides），书里正好读到有关荣军院的介绍。
+                    </p>
+                    
+                    <!-- 图片2: 巴黎和天津的对比 -->
+                    <div class="mb-12">
+                        <h4 class="font-medium mb-2">图片2: 巴黎和天津的对比</h4>
+                        <div class="aspect-[16/9] rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片：巴黎和天津的对比</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-12">
+                        在天津看的北安桥，在亚历山大三世桥找到了原形；在博物馆看到的原迹，回天津再欣赏别有一番滋味。
+                    </p>
+                    
+                    <h2 id="belgium" class="text-2xl font-bold mb-8">比利时</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        第一个小短途选择了比利时三座城市，根特、布鲁塞尔、布鲁日。是我的第一个solo trip，很爽 很爽 很爽。每个人或许都有过solo trip的经历，那种自由，那种全部由你掌控的感觉，又有一些小插曲给你带来的惊喜。（前提还是很苛刻的，你要很有规划能力，很有旅游经验，心态极好。）
+                    </p>
+                    
+                    <!-- 图片预留位置 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <!-- 图片1 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <i class="fa fa-picture-o text-3xl text-gray-400 mb-3"></i>
+                                <p class="text-gray-500">图片1</p>
+                            </div>
+                        </div>
+                        <!-- 图片2 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <i class="fa fa-picture-o text-3xl text-gray-400 mb-3"></i>
+                                <p class="text-gray-500">图片2</p>
+                            </div>
+                        </div>
+                        <!-- 图片3 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <i class="fa fa-picture-o text-3xl text-gray-400 mb-3"></i>
+                                <p class="text-gray-500">图片3</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="cote-dazur" class="text-2xl font-bold mb-8">蔚蓝海岸Côte d'Azur</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        真正意义上的度假，真正的、彻底的Chill
+                    </p>
+                    
+                    <!-- 图片预留位置 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+                        <!-- 图片1：尼斯 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <i class="fa fa-picture-o text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">图片1：尼斯</p>
+                            </div>
+                        </div>
+                        <!-- 图片2：戛纳 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <i class="fa fa-picture-o text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">图片2：戛纳</p>
+                            </div>
+                        </div>
+                        <!-- 图片3：摩纳哥 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <i class="fa fa-picture-o text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">图片3：摩纳哥</p>
+                            </div>
+                        </div>
+                        <!-- 图片4：Antibes -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <i class="fa fa-picture-o text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">图片4：Antibes</p>
+                            </div>
+                        </div>
+                        <!-- 图片5：芒通 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <i class="fa fa-picture-o text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">图片5：芒通</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="normandy" class="text-2xl font-bold mb-8">北法诺曼底大区</h2>
+                    
+                    <!-- 图片预留位置 -->
+                    <div class="mb-12">
+                        <div class="aspect-[16/9] rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片预留位置</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="switzerland" class="text-2xl font-bold mb-8">瑞士</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        咱们的旅游预算来自奥运会的津贴，一共25, 000欧。瑞士本不应该在这个预算考虑范围内，但多亏可以拜访好友D.D.L，让瑞吉山徒步、小屋里吃Fondu不再是奢望。
+                    </p>
+                    
+                    <!-- 图片预留位置 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        <!-- 图片1：瑞吉山 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片1：瑞吉山</p>
+                            </div>
+                        </div>
+                        <!-- 图片2 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fa fa-picture-o text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">图片2</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="germany" class="text-2xl font-bold mb-8">德国</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        《航空大都市》书中提到，1800年，柏林还是一座紧凑的小都市，横穿全程大约需要1小时左右。到了1950年，柏林的直径扩大了100倍，但得益于交通工具的发展，横穿城市耗时仍是1小时。意大利物理学家马切提（Cesare Marchetti）总结的“人类一小时活动原则”在当代社会仍然适用。区别是，当人们从“City Walk”转化为乘坐小轿车、地铁等出行工具时，人们的注意力从移步换景，感受城市的脉搏，转化为了驾驶交通工具，或者在密闭的地下交通工具里刷手机（依靠智能驾驶的低空经济或许能解放这一劳烦）。
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        在2024年，阿一古选择日行三万步，六小时从南到北，从西到东脚丈柏林，感受厚重的历史沉淀和城市脉搏。
+                    </p>
+                    
+                    <!-- 视频：Germany.mp4 -->
+                    <div class="mb-12">
+                        <div class="aspect-video rounded-lg overflow-hidden">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="../videos/Germany.mp4" type="video/mp4">
+                                <source src="../videos/Germany.webm" type="video/webm">
+                                您的浏览器不支持视频播放。
+                            </video>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">提示：请将德国视频文件上传至 videos/Germany.mp4</p>
+                    </div>
+                    
+                    <h2 id="uk" class="text-2xl font-bold mb-8">英国</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        奥运会赚到的津贴旅行到这已经花了一半了，在英国探索了曼彻斯特、伦敦、爱丁堡三座城市。
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        在英国选择先来好朋友留学的城市曼彻斯特，在红色的建筑跳了Swing Dance舞会。感谢Luniva，让我们以极低的酒店员工价，圣诞期间在伦敦住到了绝佳的地段。爱丁堡的地形在脑子里建模了，谁人能不爱上爱丁堡。
+                    </p>
+                    
+                    <!-- 图片预留位置 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <!-- 图片1 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <i class="fa fa-picture-o text-3xl text-gray-400 mb-3"></i>
+                                <p class="text-gray-500">图片1</p>
+                            </div>
+                        </div>
+                        <!-- 图片2 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <i class="fa fa-picture-o text-3xl text-gray-400 mb-3"></i>
+                                <p class="text-gray-500">图片2</p>
+                            </div>
+                        </div>
+                        <!-- 图片3 -->
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <i class="fa fa-picture-o text-3xl text-gray-400 mb-3"></i>
+                                <p class="text-gray-500">图片3</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="denmark" class="text-2xl font-bold mb-8">丹麦</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        在欧云雀的家度过了圣诞节。小时候的圣诞节意味着惊喜，因为“圣诞老人”总会在我的枕头下藏一个生肖玩偶，直到五六年级了我才知道世界上没有圣诞老人。我的爸妈愿意守护这个童话。后来的圣诞节过得有点平淡乏味，直到2024年的圣诞，到了童话小镇哥本哈根，在好朋友的家里过了一个地地道道的西方圣诞节，圣诞的含义又多了一层感恩。
+                    </p>
+                    
+                    <!-- 视频：Denmark.mp4 -->
+                    <div class="mb-12">
+                        <div class="aspect-video rounded-lg overflow-hidden">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="../videos/Denmark.mp4" type="video/mp4">
+                                <source src="../videos/Denmark.webm" type="video/webm">
+                                您的浏览器不支持视频播放。
+                            </video>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">提示：请将丹麦视频文件上传至 videos/Denmark.mp4</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                        <h3 class="text-xl font-semibold mb-3">游学感悟</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            欧洲游学让我明白，世界是如此的多元和精彩。不同的国家和文化有着各自独特的魅力，我们应该以开放的心态去学习和欣赏。这段经历也让我变得更加独立和自信，学会了如何在陌生的环境中适应和成长。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            在最美的年纪，能够在欧洲游学和旅行，是我人生中一段宝贵的经历。它不仅丰富了我的视野，也让我对未来有了更多的期待和规划。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 返回链接 -->
+                <div class="mt-12 text-center">
+                    <a href="../index.html#milestones" class="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                        <i class="fa fa-arrow-left mr-2"></i> 返回高光时刻
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-8 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 Aigu（阿一古）. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

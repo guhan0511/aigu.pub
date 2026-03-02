@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐作品集 | Aigu（阿一古）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#333333',
+                        accent: '#0066ff',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .hover-scale {
+                @apply hover:scale-105 transition-transform duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-primary font-sans">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 md:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
+                <div class="hidden md:flex ml-auto space-x-8">
+                    <a href="../index.html" class="text-secondary hover:text-accent transition-colors">Home</a>
+                    <a href="../index.html#works" class="text-secondary hover:text-accent transition-colors">Portfolio</a>
+                    <a href="../index.html#about" class="text-secondary hover:text-accent transition-colors">About</a>
+                    <a href="../index.html#contact" class="text-secondary hover:text-accent transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集详情 -->
+    <section class="py-32 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">音乐作品集</h1>
+            <p class="text-xl text-gray-600 mb-16 text-center">Music Portfolio</p>
+            
+            <!-- 介绍 -->
+            <div class="bg-light rounded-lg p-8 mb-16">
+                <p class="text-gray-700 leading-relaxed">
+                    80年代经济上行期的音乐总是那么让人着迷，霓虹都市，灯红酒绿，纸醉金迷，泡沫破碎前一切都是那么美好。经济不景气时期会额外怀念那个美好的City Pop时代。我们什么时候能迎来经济复苏？根据50-60年一轮的技术和制度变革周期（康波周期），2022年底生成式人工智能的创新与产业应用，被不少研究者视作本轮康波周期的回升期的重要信号。CityPOP能否跟随着经济复苏掀起一波新浪潮？
+                </p>
+            </div>
+            
+            <!-- 作品列表 -->
+            <div class="space-y-16">
+                <!-- 作品1：City Pop 音乐制作 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">01</div>
+                        <h2 class="text-3xl font-semibold mb-4">City Pop 音乐制作</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">City Pop Music Production</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[16/9] rounded-lg overflow-hidden">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=80s%20City%20Pop%20music%20studio%2C%20synthesizers%2C%20vinyl%20records%2C%20neon%20lights%2C%20retro%20aesthetic%2C%20professional%20music%20production%20setup%2C%20high%20quality%20photography&image_size=landscape_16_9" alt="City Pop 音乐制作" class="w-full h-full object-cover">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    探索80年代City Pop音乐的独特魅力，通过现代音乐制作技术重现经典的霓虹都市 sound。融合复古合成器音色与现代制作手法，打造充满怀旧氛围的音乐作品。
+                                </p>
+                                <h3 class="text-xl font-semibold">制作设备</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Synthesizers</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Digital Audio Workstation</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">MIDI Controllers</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Audio Interface</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品2：AI 音乐创作 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">02</div>
+                        <h2 class="text-3xl font-semibold mb-4">AI 音乐创作</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">AI Music Composition</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[16/9] rounded-lg overflow-hidden">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20music%20composition%20workflow%2C%20modern%20music%20studio%2C%20computer%20screen%20with%20music%20software%2C%20creative%20atmosphere%2C%20professional%20lighting%2C%20high%20quality%20photography&image_size=landscape_16_9" alt="AI 音乐创作" class="w-full h-full object-cover">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    利用人工智能技术辅助音乐创作，从旋律生成到编曲配器，探索AI与人类创造力的结合。通过AI工具激发灵感，创作出独特的音乐作品。
+                                </p>
+                                <h3 class="text-xl font-semibold">技术工具</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">AI Music Generator</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Digital Audio Workstation</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Virtual Instruments</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Audio Processing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品3：音乐可视化 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">03</div>
+                        <h2 class="text-3xl font-semibold mb-4">音乐可视化</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">Music Visualization</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[16/9] rounded-lg overflow-hidden">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Music%20visualization%20project%2C%20colorful%20audio%20reactive%20graphics%2C%20modern%20digital%20art%2C%20creative%20visual%20effects%2C%20professional%20quality%2C%20high%20resolution&image_size=landscape_16_9" alt="音乐可视化" class="w-full h-full object-cover">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    将音乐转化为视觉艺术，通过音频可视化技术创建动态的视觉效果。探索音乐与视觉的融合，为音乐作品增添新的维度。
+                                </p>
+                                <h3 class="text-xl font-semibold">技术工具</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Visualization Software</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Audio Analysis Tools</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Digital Art Creation</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Animation Techniques</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 返回按钮 -->
+            <div class="text-center mt-16">
+                <a href="../index.html#works" class="inline-block px-6 py-3 bg-gray-200 text-black font-medium rounded-md hover:bg-gray-300 transition duration-300">
+                    <i class="fa fa-arrow-left mr-2"></i>返回作品集
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 Aigu（阿一古）. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

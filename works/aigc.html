@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGC 作品集 | Aigu（阿一古）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#333333',
+                        accent: '#0066ff',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .hover-scale {
+                @apply hover:scale-105 transition-transform duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+        }
+    </style>
+    
+    <script>
+        // AIGC作品轮播功能 - 滑雪照片
+        function nextAIGCSlide() {
+            const carousel = document.getElementById('aigc-carousel');
+            const slides = carousel.children.length;
+            let currentSlide = parseInt(carousel.dataset.currentSlide) || 0;
+            currentSlide = (currentSlide + 1) % slides;
+            carousel.dataset.currentSlide = currentSlide;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        function prevAIGCSlide() {
+            const carousel = document.getElementById('aigc-carousel');
+            const slides = carousel.children.length;
+            let currentSlide = parseInt(carousel.dataset.currentSlide) || 0;
+            currentSlide = (currentSlide - 1 + slides) % slides;
+            carousel.dataset.currentSlide = currentSlide;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        // 发型替换轮播功能
+        function nextHairstyleSlide() {
+            const carousel = document.getElementById('hairstyle-carousel');
+            const slides = carousel.children.length;
+            let currentSlide = parseInt(carousel.dataset.currentSlide) || 0;
+            currentSlide = (currentSlide + 1) % slides;
+            carousel.dataset.currentSlide = currentSlide;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        function prevHairstyleSlide() {
+            const carousel = document.getElementById('hairstyle-carousel');
+            const slides = carousel.children.length;
+            let currentSlide = parseInt(carousel.dataset.currentSlide) || 0;
+            currentSlide = (currentSlide - 1 + slides) % slides;
+            carousel.dataset.currentSlide = currentSlide;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        // 页面加载完成后设置自动轮播
+        document.addEventListener('DOMContentLoaded', function() {
+            // 滑雪照片轮播
+            const carousel1 = document.getElementById('aigc-carousel');
+            if (carousel1) {
+                carousel1.dataset.currentSlide = '0';
+                setInterval(nextAIGCSlide, 5000);
+            }
+            
+            // 发型替换轮播
+            const carousel2 = document.getElementById('hairstyle-carousel');
+            if (carousel2) {
+                carousel2.dataset.currentSlide = '0';
+                setInterval(nextHairstyleSlide, 5000);
+            }
+        });
+    </script>
+</head>
+<body class="bg-white text-primary font-sans">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 md:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
+                <div class="hidden md:flex ml-auto space-x-8">
+                    <a href="../index.html" class="text-secondary hover:text-accent transition-colors">Home</a>
+                    <a href="../index.html#works" class="text-secondary hover:text-accent transition-colors">Portfolio</a>
+                    <a href="../index.html#about" class="text-secondary hover:text-accent transition-colors">About</a>
+                    <a href="../index.html#contact" class="text-secondary hover:text-accent transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集详情 -->
+    <section class="py-32 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">AIGC 作品集</h1>
+            <p class="text-xl text-gray-600 mb-16 text-center">AI Generated Content Portfolio</p>
+            
+            <!-- 介绍 -->
+            <div class="bg-light rounded-lg p-8 mb-16">
+                <p class="text-gray-700 leading-relaxed">
+                    用 AI 打通视觉创作全链路，从照片精修还原质感，到生成创意大片和商业产品图，让灵感快速落地为专业级视觉内容。
+                </p>
+            </div>
+            
+            <!-- 作品列表 -->
+            <div class="space-y-16">
+                <!-- 作品1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">01</div>
+                        <h2 class="text-3xl font-semibold mb-4">创意照片生成</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">Creative Photo Generation</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+                                <div class="flex transition-transform duration-500 ease-in-out" id="aigc-carousel">
+                                    <div class="min-w-full">
+                                        <img src="../../images/雪雾中.jpg" alt="滑雪照片1" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="min-w-full">
+                                        <img src="../../images/滑雪1.png" alt="滑雪照片2" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="min-w-full">
+                                        <img src="../../images/滑雪2.jpg" alt="滑雪照片3" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                                <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all" onclick="prevAIGCSlide()">
+                                    <i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all" onclick="nextAIGCSlide()">
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    想拍其他大佬的同款滑雪大片，但是苦于咱们还刻滑不了那么深，那咱们借用一下大佬神图的姿势和氛围，自嗨一下不过分吧？把需求交给目前全网性能最强的模型Nano Banana Pro，让他帮你完成融合，还能局部再命令修改，简直是产品图神器。没有大规模出图需求，可以先白嫖一些网站的每日限额。加起来每天免费出个20张图不成问题。
+                                </p>
+                                <h3 class="text-xl font-semibold">技术栈</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Nano banana Pro</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Text-to-Image AI</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Prompt Engineering</span>
+                                </div>
+                                
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    点击链接每天免费额外生成10张，加入社区获取提示词灵感。 <a href="https://www.meigen.ai/invite/AMMY2766" class="text-accent hover:underline" target="_blank">https://www.meigen.ai/invite/AMMY2766</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 发型替换功能 -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+                                <div class="flex transition-transform duration-500 ease-in-out" id="hairstyle-carousel">
+                                    <div class="min-w-full">
+                                        <img src="../../images/发型替换李钟硕四宫格.png" alt="发型替换1" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="min-w-full">
+                                        <img src="../../images/发型替换四宫格2.png" alt="发型替换2" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                                <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all" onclick="prevHairstyleSlide()">
+                                    <i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all" onclick="nextHairstyleSlide()">
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Tony老师听不懂人话？你想要的和他理解的完全是两码事？还是说其实你高估了自己驾驭这款发型的能力。找一张自己的帅照，让Nano Banana Pro先帮你剪一个看看，你是不是真把自己当蔡徐坤了。有满意的你自己，在拿着它找托尼老师，这下他剪出来不像样就是他的问题了。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+            <!-- 返回按钮 -->
+            <div class="text-center mt-16">
+                <a href="../index.html#works" class="inline-block px-6 py-3 bg-gray-200 text-black font-medium rounded-md hover:bg-gray-300 transition duration-300">
+                    <i class="fa fa-arrow-left mr-2"></i>返回作品集
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 Aigu（阿一古）. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>近期阅读 | Aigu（阿一古）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#333333',
+                        accent: '#0066ff',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-white text-primary font-sans">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="navbar-fixed bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
+                <a href="../index.html" class="inline-flex items-center px-4 py-2 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                    <i class="fa fa-arrow-left mr-2"></i> 返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 内容区域 -->
+    <section class="py-24 pt-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- 标题 -->
+                <div class="mb-12 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-2">近期阅读</h1>
+                    <p class="text-xl text-gray-600">Recent Reading</p>
+                </div>
+                
+                <!-- 主图 -->
+                <div class="mb-12">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/2025reading_list.png" alt="2025 Reading List" class="w-full h-full object-contain bg-white">
+                    </div>
+                </div>
+                
+                <!-- 内容 -->
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        2025年读书一段话总结：在新技术带来的基础设施变革情况下，建立《AI时代—弯道超车新思维》，用工具提出一个好问题，实现人机协同，提升自己的生产力。摒弃过分功利的思考模式，秉持《黑客与画家》共同的精神——探索创新、同时保持对美感的执着。在AI工具加持，具有创新和美感思维之后，发现《真需求》，家人有真需求，恋人有真需求，客户有真需求，市场有真需求，提供价值、引领共识、打造自己的模式，在竞技台上活下去！人永远赚不到认知以外的钱，怎么能搞到钱？怎么能让《财富觉醒》？关注发展趋势，发掘维护资源，提升自己的贵人缘或许是一条弯道超车的道路。最后，教育是一代又一代人的话题，关乎自己，关乎儿女，关乎新一代人的成长体系。工业革命的那一套定制化教育体系或许在AI时代已不再试用。《未来学校—重新定义教育》或许能让人跳出认知泥潭，以后更好地教育后代。
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        下一年一定要看！
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        《鬼谷子》：说服一位君主做出决策，《真需求》书里对《鬼谷子》各篇做了核心提炼，并回归到关键步骤，发现真需求，帝王也拍手叫好之后，迟迟不做决定是没理清利益相关人地图。在职场，在生活中，每件事都有诸多利益相关方，帮上位者画清利益相关方地图，是成事的关键。该说的都说了，该做的都做了，你也答应了，最后你没行动，问题就在于此。
+                        《马斯克传》：年初看了马斯克的纪录片，一个怪人，人多多少少年轻的时候都有点奇思妙想，都有点叛逆，为什么有的人痴迷于将人类送上火星，并取得成果。现在智能手机里的芯片性能和最早发射卫星的芯片性能差不多，为什么我们却用它来刷短视频。在chaos中保持专注，保持初心，是应该和这位大师学习的。
+                    </p>
+                </div>
+                
+                <!-- 返回链接 -->
+                <div class="mt-12 text-center">
+                    <a href="../index.html#reading" class="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                        <i class="fa fa-arrow-left mr-2"></i> 返回近期阅读
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-8 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 Aigu（阿一古）. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

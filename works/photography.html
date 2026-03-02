@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影作品集 | Aigu（阿一古）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#333333',
+                        accent: '#0066ff',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .hover-scale {
+                @apply hover:scale-105 transition-transform duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-primary font-sans">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 md:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
+                <div class="hidden md:flex ml-auto space-x-8">
+                    <a href="../index.html" class="text-secondary hover:text-accent transition-colors">Home</a>
+                    <a href="../index.html#works" class="text-secondary hover:text-accent transition-colors">Portfolio</a>
+                    <a href="../index.html#about" class="text-secondary hover:text-accent transition-colors">About</a>
+                    <a href="../index.html#contact" class="text-secondary hover:text-accent transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集详情 -->
+    <section class="py-32 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">摄影作品集</h1>
+            <p class="text-xl text-gray-600 mb-16 text-center">Photography Portfolio</p>
+            
+            <!-- 介绍 -->
+            <div class="bg-light rounded-lg p-8 mb-16">
+                <p class="text-gray-700 leading-relaxed">
+                    数码相机的朝代更替，手机将摄影功能缝合，运动相机的应运而生；复古潮、胶片摄影重登舞台。摄影设备的功能在变，形态在变，不变的是记录美好的真需求。每张照片的背后是一段独特的故事，通过摄影师的摄影眼进行传递。
+                </p>
+            </div>
+            
+            <!-- 作品列表 -->
+            <div class="space-y-16">
+                <!-- 作品1：风光摄影集 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">01</div>
+                        <h2 class="text-3xl font-semibold mb-4">风光摄影集</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">Landscape Photography</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[16/9] rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=450&fit=crop" alt="风光摄影集" class="w-full h-full object-cover">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    记录大自然的壮丽景色，通过镜头捕捉山川湖海的美丽瞬间。每张照片都展现了不同地域的独特风光，传递着对自然的敬畏与热爱。
+                                </p>
+                                <h3 class="text-xl font-semibold">摄影设备</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Digital Camera</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Wide Angle Lens</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Tripod</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Natural Light</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品2：人文摄影集 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">02</div>
+                        <h2 class="text-3xl font-semibold mb-4">人文摄影集</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">Street & Documentary Photography</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[16/9] rounded-lg overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1499561343534-2303514362f8?w=800&h=450&fit=crop" alt="人文摄影集" class="w-full h-full object-cover">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    关注社会生活的方方面面，通过镜头记录普通人的故事与情感。每张照片都展现了不同文化背景下的人文景观，传递着对人性的理解与关怀。
+                                </p>
+                                <h3 class="text-xl font-semibold">摄影设备</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Mirrorless Camera</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Prime Lens</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Natural Light</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Candid Style</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 作品3：胶片摄影集 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <div class="p-8">
+                        <div class="text-3xl font-bold text-accent mb-2">03</div>
+                        <h2 class="text-3xl font-semibold mb-4">胶片摄影集</h2>
+                        <p class="text-lg font-medium text-gray-600 mb-8">Film Photography</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="aspect-[16/9] rounded-lg overflow-hidden">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vintage%20film%20photography%20style%2C%20warm%20tones%2C%20film%20grain%2C%20retro%20aesthetic%2C%20street%20photography%2C%20professional%20quality&image_size=landscape_16_9" alt="胶片摄影集" class="w-full h-full object-cover">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-semibold">项目概述</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    探索胶片摄影的独特魅力，通过传统胶片相机捕捉瞬间。复古的色调和质感，展现了摄影的经典美学，传递着对传统工艺的敬意。
+                                </p>
+                                <h3 class="text-xl font-semibold">摄影设备</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Film Camera</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">35mm Film</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Manual Focus</span>
+                                    <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Darkroom Processing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 返回按钮 -->
+            <div class="text-center mt-16">
+                <a href="../index.html#works" class="inline-block px-6 py-3 bg-gray-200 text-black font-medium rounded-md hover:bg-gray-300 transition duration-300">
+                    <i class="fa fa-arrow-left mr-2"></i>返回作品集
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 Aigu（阿一古）. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

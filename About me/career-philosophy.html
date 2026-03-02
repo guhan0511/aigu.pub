@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的职业观 | Aigu（阿一古）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        secondary: '#333333',
+                        accent: '#0066ff',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-white text-primary font-sans">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="navbar-fixed bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
+                <a href="../index.html" class="inline-flex items-center px-4 py-2 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                    <i class="fa fa-arrow-left mr-2"></i> 返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 内容区域 -->
+    <section class="py-24 pt-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- 标题 -->
+                <div class="mb-12 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-2">我的职业观</h1>
+                    <p class="text-xl text-gray-600">My Career Philosophy</p>
+                </div>
+                
+                <!-- 主图 -->
+                <div class="mb-12">
+                    <div class="aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&h=675&fit=crop" alt="Career Philosophy" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- 内容 -->
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        服务公司在AI时代完成数字化转型。“线上化让工作变得可能描述。AI 化让重复性劳动自动化。数据化让优化变得可迭代。”——刘峥嵘 唯医骨科创始人《我们用AI，把一家500人公司重做到29人》
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        成为管理一系列AI智能体的AI工长，雇佣我的同时等于雇佣我和我手下的“团队”，也请像给饭补、交通补一样赞助我“Token津贴”。（蔡钰）
+                    </p>
+                </div>
+                
+                <!-- 返回链接 -->
+                <div class="mt-12 text-center">
+                    <a href="../index.html#career" class="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                        <i class="fa fa-arrow-left mr-2"></i> 返回我的职业观
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-8 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 Aigu（阿一古）. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
