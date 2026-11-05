@@ -1,0 +1,63 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hDotsNavy" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="2.8" fill="#14163A"/>
+    </pattern>
+    <pattern id="hDotsCream" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="2.4" fill="#F8F1EA"/>
+    </pattern>
+    <linearGradient id="hArch1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C14F74"/>
+      <stop offset="100%" stop-color="#1C7A8C"/>
+    </linearGradient>
+    <linearGradient id="hArch2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1C7A8C"/>
+      <stop offset="100%" stop-color="#D4B46B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="#F8F1EA"/>
+
+  <!-- top stripe band -->
+  <rect x="0" y="0" width="1200" height="20" fill="#C14F74"/>
+  <rect x="0" y="20" width="1200" height="14" fill="#14163A"/>
+  <rect x="0" y="34" width="1200" height="14" fill="#A8822E"/>
+
+  <!-- top-left navy block -->
+  <rect x="0" y="48" width="340" height="230" fill="#14163A"/>
+
+  <!-- dot block, top-center -->
+  <rect x="340" y="48" width="300" height="230" fill="#F3E4DD"/>
+  <rect x="340" y="48" width="300" height="230" fill="url(#hDotsNavy)"/>
+
+  <!-- gold circle, right side -->
+  <circle cx="1040" cy="200" r="190" fill="#A8822E"/>
+
+  <!-- pink dotted block, left lower -->
+  <rect x="0" y="278" width="340" height="230" fill="#C14F74"/>
+  <rect x="0" y="278" width="340" height="230" fill="url(#hDotsCream)" opacity=".6"/>
+
+  <!-- gradient arch, center -->
+  <path d="M340,560 a210,210 0 0 1 420,0 Z" fill="url(#hArch1)"/>
+
+  <!-- ring badge, focal -->
+  <circle cx="560" cy="330" r="92" fill="#14163A"/>
+  <circle cx="560" cy="330" r="92" fill="none" stroke="#F8F1EA" stroke-width="7"/>
+  <circle cx="560" cy="330" r="38" fill="none" stroke="#F8F1EA" stroke-width="4"/>
+  <circle cx="560" cy="330" r="14" fill="#F8F1EA"/>
+
+  <!-- turquoise gradient block, right lower -->
+  <rect x="850" y="390" width="350" height="180" fill="url(#hArch2)"/>
+
+  <!-- navy block, far right -->
+  <rect x="1050" y="390" width="150" height="310" fill="#14163A"/>
+
+  <!-- bottom stripe band -->
+  <rect x="0" y="508" width="640" height="70" fill="#F3E4DD"/>
+  <rect x="0" y="578" width="640" height="16" fill="#14163A"/>
+  <rect x="0" y="594" width="640" height="14" fill="#C14F74"/>
+  <rect x="0" y="608" width="640" height="16" fill="#A8822E"/>
+
+  <!-- small gold corner circle, bottom-left -->
+  <circle cx="60" cy="650" r="80" fill="#A8822E" opacity=".9"/>
+</svg>

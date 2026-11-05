@@ -1,0 +1,55 @@
+<svg width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dotsNavyBg" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="2.6" fill="#14163A"/>
+    </pattern>
+    <pattern id="dotsCreamBg" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="2.2" fill="#F8F1EA"/>
+    </pattern>
+    <linearGradient id="archGradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C14F74"/>
+      <stop offset="100%" stop-color="#1C7A8C"/>
+    </linearGradient>
+    <linearGradient id="archGradBg2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1C7A8C"/>
+      <stop offset="100%" stop-color="#A8822E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="480" fill="#F8F1EA"/>
+
+  <!-- top stripe band -->
+  <rect x="0" y="0" width="480" height="14" fill="#C14F74"/>
+  <rect x="0" y="14" width="480" height="10" fill="#14163A"/>
+  <rect x="0" y="24" width="480" height="10" fill="#A8822E"/>
+
+  <!-- top-right dot block -->
+  <rect x="300" y="34" width="180" height="150" fill="#F3E4DD"/>
+  <rect x="300" y="34" width="180" height="150" fill="url(#dotsNavyBg)"/>
+
+  <!-- top-left navy block -->
+  <rect x="0" y="34" width="150" height="110" fill="#14163A"/>
+
+  <!-- pink block with cream dots, mid-left -->
+  <rect x="0" y="144" width="150" height="130" fill="#C14F74"/>
+  <rect x="0" y="144" width="150" height="130" fill="url(#dotsCreamBg)" opacity=".6"/>
+
+  <!-- gradient arch, mid-center -->
+  <path d="M150,310 a90,90 0 0 1 180,0 Z" fill="url(#archGradBg)"/>
+
+  <!-- gold circle, bottom-left -->
+  <circle cx="40" cy="400" r="110" fill="#A8822E"/>
+
+  <!-- navy big block bottom-right -->
+  <rect x="330" y="220" width="150" height="260" fill="#14163A"/>
+  <rect x="330" y="220" width="150" height="260" fill="url(#dotsCreamBg)" opacity=".2"/>
+
+  <!-- turquoise gradient block, bottom-center -->
+  <rect x="150" y="310" width="180" height="90" fill="url(#archGradBg2)"/>
+
+  <!-- bottom stripe band -->
+  <rect x="0" y="400" width="330" height="80" fill="#F3E4DD"/>
+  <rect x="0" y="440" width="330" height="14" fill="#14163A"/>
+  <rect x="0" y="454" width="330" height="12" fill="#C14F74"/>
+  <rect x="0" y="466" width="330" height="14" fill="#A8822E"/>
+</svg>

@@ -8,19 +8,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#111111',
-                        secondary: '#333333',
-                        accent: '#0066ff',
-                        light: '#f5f5f5',
+                        primary: 'rgb(20, 22, 58)',
+                        secondary: 'rgb(75, 78, 114)',
+                        accent: 'rgb(209, 70, 122)',
+                        accent2: 'rgb(209, 70, 122)',
+                        light: '#F8F1EA',
+                        white: 'rgb(209, 70, 122)',
+                        gray: {
+                            400: 'rgb(75, 78, 114)',
+                            500: 'rgb(75, 78, 114)',
+                            600: 'rgb(75, 78, 114)',
+                            700: 'rgb(75, 78, 114)',
+                        },
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+                        display: ['Poiret One', 'serif'],
+                        cond: ['Bebas Neue', 'sans-serif'],
                     },
                 }
             }
@@ -47,7 +58,7 @@
         .highlight-link {
             position: relative;
             display: inline-block;
-            color: #0066ff;
+            color: rgb(209, 70, 122);
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -66,7 +77,7 @@
         }
         
         .highlight-link:hover {
-            color: #0052cc;
+            color: rgb(75, 78, 114);
         }
         
         .highlight-link:hover::after {
@@ -76,13 +87,13 @@
         }
     </style>
 </head>
-<body class="bg-white text-primary font-sans">
+<body class="bg-light text-primary font-sans">
     <!-- 导航栏 -->
     <nav id="navbar" class="navbar-fixed bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center">
                 <a href="../index.html" class="text-2xl font-bold text-primary">Aigu（阿一古）</a>
-                <a href="../index.html" class="inline-flex items-center px-4 py-2 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                <a href="../index.html" class="inline-flex items-center px-4 py-2 bg-accent text-white font-medium rounded-md hover:bg-accent2 transition duration-300">
                     <i class="fa fa-arrow-left mr-2"></i> 返回首页
                 </a>
             </div>
@@ -400,7 +411,7 @@
                         <p class="text-sm text-gray-500 mt-2">提示：请将丹麦视频文件上传至 videos/Denmark.mp4</p>
                     </div>
                     
-                    <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                    <div class="bg-light p-6 rounded-lg mb-8">
                         <h3 class="text-xl font-semibold mb-3">游学感悟</h3>
                         <p class="text-gray-700 leading-relaxed">
                             欧洲游学让我明白，世界是如此的多元和精彩。不同的国家和文化有着各自独特的魅力，我们应该以开放的心态去学习和欣赏。这段经历也让我变得更加独立和自信，学会了如何在陌生的环境中适应和成长。
@@ -413,7 +424,7 @@
                 
                 <!-- 返回链接 -->
                 <div class="mt-12 text-center">
-                    <a href="../index.html#milestones" class="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition duration-300">
+                    <a href="../index.html#milestones" class="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-md hover:bg-accent2 transition duration-300">
                         <i class="fa fa-arrow-left mr-2"></i> 返回高光时刻
                     </a>
                 </div>
@@ -422,7 +433,7 @@
     </section>
 
     <!-- 页脚 -->
-    <footer class="py-8 bg-black text-white">
+    <footer class="py-8 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400">© 2025 Aigu（阿一古）. All rights reserved.</p>
         </div>
